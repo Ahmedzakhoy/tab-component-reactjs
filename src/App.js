@@ -4,30 +4,32 @@ const content = [
   {
     summary: "React is a library for building UIs",
     details:
-      "Dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      "React is indeed a JavaScript library primarily designed for creating user interfaces (UIs) for web applications. It provides a component-based architecture, allowing developers to build reusable UI components that encapsulate their own state and behavior.",
   },
   {
     summary: "State management is like giving state a home",
     details:
-      "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      "As a home provides a centralized place for individuals to live and organize their belongings, state management provides a structured system for managing and maintaining the state (data) of an application.",
   },
   {
     summary: "We can think of props as the component API",
     details:
-      "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+      "In React, props (short for properties) are a fundamental mechanism for passing data from parent components to child components. They serve as a way to configure and customize the behavior and appearance of a component, much like how an API defines the interface through which different software components interact.",
   },
 ];
 
 export default function App() {
   return (
-    <div>
+    <>
+      <div>
+        <h1>Tabbed Component</h1>
+        <p>this is a tabbed component built with React JS</p>
+      </div>
       <Tabbed content={content} />
-    </div>
+    </>
   );
 }
 
-// console.log(<DifferentContent test={23} />);
-// console.log(DifferentContent());
 
 function Tabbed({ content }) {
   const [activeTab, setActiveTab] = useState(0);
@@ -124,6 +126,10 @@ function DifferentContent() {
   return (
     <div className="tab-content">
       <h4>I'm a DIFFERENT tab, so I reset state 💣💥</h4>
+      <p>
+        because the other tab component unmount on adding this content, the
+        state of other tab components is lost and reset
+      </p>
     </div>
   );
 }

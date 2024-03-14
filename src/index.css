@@ -18,6 +18,10 @@ button {
   cursor: pointer;
 }
 
+#root div p {
+  margin-bottom: 20px;
+}
+
 .toggle {
   position: absolute;
   right: 0;
@@ -101,4 +105,53 @@ button {
   color: #fff;
   padding: 6px 12px;
   border-radius: 4px;
+}
+
+
+
+@media only screen and (max-width: 700px) {
+  body {
+    margin: 10px 10px;
+  }
+  #root div h1 {
+    font-size: 30px;
+  }
+  
+  .toggle {
+    font-size: 20px;
+    padding: 2px;
+  }
+  
+  .tabs {
+    margin-bottom: 4px;
+  }
+  
+  .tab {
+    padding: 8px 14px;
+    margin-right: 4px;
+  }
+  
+
+  
+  .tab-content {
+    padding: 16px;
+  }
+  
+  .tab-content h4 {
+    margin-bottom: 8px;
+  }
+  
+  
+  .tab-actions {
+    margin-top: 8px;
+    margin-bottom: 12px;
+  }
+  
+    
+  
+  .tab-undo button {
+    padding: 3px 6px;
+  }
+  
+  
 }
